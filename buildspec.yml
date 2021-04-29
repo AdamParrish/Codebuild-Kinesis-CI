@@ -7,11 +7,12 @@ phases:
       java: corretto8
     commands:
             - echo "Installing Chrome Latest Stable"
-            - wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-            - yum localinstall google-chrome-stable_current_x86_64.rpm -y 
+            - wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+            - yum localinstall google-chrome-stable_current_x86_64.rpm -yq 
             - echo "Installing Kinesis CI 2.0"
             - wget -q "https://kinesis-releases.s3.eu-central-1.amazonaws.com/kinesis-bundle-2021.2/kinesis-cli-2021.2.0-linux64.tar.gz"
             - tar -zxf kinesis-cli-2021.2.0-linux64.tar.gz
+            - echo "Completed install"
     pre_build:
         commands: 
             - echo "we are in the pre build phase"
