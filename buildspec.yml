@@ -7,8 +7,8 @@ phases:
       java: corretto8
     commands:
             - echo "installing something"
-            - wget "https://kinesis-releases.s3.eu-central-1.amazonaws.com/kinesis-bundle-2021.2/kinesis-cli-2021.2.0-linux64.tar.gz"
-            - tar -zxvf kinesis-cli-2021.2.0-linux64.tar.gz
+            - wget -q "https://kinesis-releases.s3.eu-central-1.amazonaws.com/kinesis-bundle-2021.2/kinesis-cli-2021.2.0-linux64.tar.gz"
+            - tar -zxf kinesis-cli-2021.2.0-linux64.tar.gz
     pre_build:
         commands: 
             - echo "we are in the pre build phase"
